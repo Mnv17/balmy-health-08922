@@ -1,0 +1,132 @@
+.right-sidebar {
+  padding-top: 120px; /* Space for the absolute positioned navbar */
+  padding-right: 50px;
+  padding-left: 120px; /* This padding dictates how much content is revealed from behind the overlapping hero */
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.sidebar-header h2 {
+  font-size: 36px;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin: 0 0 20px 0;
+  letter-spacing: 1px;
+}
+
+.sidebar-header p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #a3a3a3;
+  margin: 0;
+  max-width: 300px;
+}
+
+.sidebar-products-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.highly-recommended-title {
+  font-size: 32px;
+  line-height: 1.1;
+  color: #1a1a1a;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.sidebar-products {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+/* Inheriting product card styles from previous implementation */
+/* We copy them here so RightSidebar is self-contained and Arrivals can drop them */
+.product-card {
+  width: 100%;
+}
+
+.product-image-wrapper {
+  background-color: #f4ece4;
+  border-radius: 20px;
+  padding: 0;
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.favorite-btn:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #d4af37;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-name {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.product-price {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.product-rating {
+  font-size: 12px;
+  color: #888;
+  margin-top: 8px;
+}
+
+@media (max-width: 1200px) {
+  .right-sidebar {
+    padding-left: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .right-sidebar {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

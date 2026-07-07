@@ -1,0 +1,45 @@
+.arrivals-section {
+  padding: 120px 80px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.arrivals-content {
+  max-width: 1000px;
+}
+
+.arrivals-subtitle {
+  color: var(--color-text-muted);
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 12px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.arrivals-reveal-text {
+  font-size: 32px;
+  line-height: 1.4;
+  color: var(--color-text-main);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.word {
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .arrivals-section {
+    padding: 60px 40px;
+  }
+  .arrivals-reveal-text {
+    font-size: 24px;
+  }
+}

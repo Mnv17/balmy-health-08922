@@ -1,0 +1,49 @@
+
+:root {
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  --color-text-main: #222222;
+  --color-text-muted: #666666;
+  --color-bg-main: #faf9f6; /* Soft off-white */
+  --color-black: #111111;
+  --color-white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, p, span, div, a, button, input, textarea, select, li, ul, label, td, th, form, article, section, aside, main, header, footer, nav, figure, figcaption, blockquote, q, strong, em, b, i {
+  font-family: var(--font-sans) !important;
+}
+
+body {
+  color: var(--color-text-main);
+  background-color: var(--color-bg-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif) !important;
+  font-weight: 400 !important;
+  margin: 0;
+  color: var(--color-text-main);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.Toastify__toast-container {
+  z-index: 999999 !important;
+}

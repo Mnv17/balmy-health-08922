@@ -1,0 +1,252 @@
+.about-page-wrapper {
+  padding-top: 150px;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+/* About Hero Section */
+.about-hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 0 40px 100px;
+  align-items: center;
+}
+
+.about-hero-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-hero-title {
+  font-size: 120px;
+  line-height: 0.9;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--color-text-main);
+  margin: 0;
+  letter-spacing: -2px;
+}
+
+.about-hero-subtitle {
+  font-size: 18px;
+  color: var(--color-text-muted);
+  margin-top: 40px;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+.about-hero-images {
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+
+.about-img-main {
+  width: 60%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.about-img-secondary {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-img-secondary img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.about-philosophy-card {
+  padding: 20px;
+  background-color: var(--color-white);
+  border-radius: 20px;
+  border: 1px solid #eaeaea;
+}
+
+.about-philosophy-card h3 {
+  font-size: 24px;
+  margin: 0 0 10px 0;
+  color: var(--color-text-main);
+}
+
+.about-philosophy-card p {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Principals Section */
+.principals-section {
+  background-color: #faf9f6;
+  padding: 100px 40px;
+  border-radius: 40px;
+  margin: 0 20px 100px;
+}
+
+.principals-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.principal-card img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.principal-card h3 {
+  font-size: 28px;
+  margin: 0 0 5px 0;
+}
+
+.principal-card p {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.principals-center {
+  text-align: center;
+  padding: 0 40px;
+}
+
+.principals-center h2 {
+  font-size: 64px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0 0 30px 0;
+}
+
+.principals-center p {
+  font-size: 16px;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+/* Services Section */
+.services-section {
+  padding: 0 40px 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.services-left {
+  position: relative;
+}
+
+.services-title {
+  font-size: 64px;
+  margin: 0 0 20px 0;
+}
+
+.services-desc {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 400px;
+}
+
+.services-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.services-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.service-item h3 {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+}
+
+.service-item p {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Connect Section (Pills) */
+.connect-section {
+  padding: 100px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 100px;
+}
+
+.connect-pill {
+  padding: 20px 40px;
+  border-radius: 50px;
+  border: 1px solid var(--color-text-main);
+  font-size: 24px;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: var(--color-text-main);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.connect-pill.filled {
+  background-color: var(--color-text-main);
+  color: var(--color-white);
+}
+
+.connect-pill:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 1024px) {
+  .about-hero-section {
+    grid-template-columns: 1fr;
+  }
+  .principals-layout {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .principals-center {
+    order: -1;
+  }
+  .services-section {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .about-hero-title {
+    font-size: 72px;
+  }
+  .about-hero-images {
+    flex-direction: column;
+  }
+  .about-img-main, .about-img-secondary {
+    width: 100%;
+  }
+  .principals-center h2, .services-title {
+    font-size: 48px;
+  }
+}

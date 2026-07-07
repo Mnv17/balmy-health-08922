@@ -1,0 +1,259 @@
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.navbar-container.hidden {
+  top: -120px;
+}
+
+.navbar-pill-group {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  height: 60px;
+  background-color: transparent;
+  pointer-events: auto;
+}
+
+.pill-logo, .pill-links, .pill-icons {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #0b0b0b;
+  box-sizing: border-box;
+}
+
+.pill-logo {
+  width: 60px;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.pill-links {
+  border-radius: 30px;
+  padding: 0 30px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.pill-icons {
+  border-radius: 30px;
+  padding: 0 20px;
+  border: 1px solid rgba(255,255,255,0.15);
+  gap: 15px;
+}
+
+.logo-circle {
+  width: 46px;
+  height: 46px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-circle img {
+  max-width: 65%;
+  max-height: 65%;
+  object-fit: contain;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
+}
+
+.navbar-links li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-cuboid {
+  position: relative;
+  display: inline-block;
+  perspective: 800px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cuboid-text-hidden {
+  opacity: 0;
+  display: inline-block;
+}
+
+.cuboid-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.nav-cuboid:hover .cuboid-inner {
+  transform: rotateX(360deg);
+}
+
+.cuboid-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  color: #fff;
+}
+
+.cuboid-face.front { transform: rotateX(0deg) translateZ(10px); }
+.cuboid-face.back { transform: rotateX(180deg) translateZ(10px); }
+.cuboid-face.top { transform: rotateX(90deg) translateZ(10px); }
+.cuboid-face.bottom { transform: rotateX(-90deg) translateZ(10px); }
+
+/* Old search replaced with Neumorphic Search */
+
+.cart-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background-color: #2F4858;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+.icon-btn:hover {
+  opacity: 0.6;
+}
+
+/* Neumorphic Search UI */
+.neumorphic-search-container {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  margin-right: 5px;
+}
+
+.neumorphic-search-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #000;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 25px;
+  padding: 0 16px;
+  height: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.neumorphic-search-btn:hover {
+  border-color: #fff;
+}
+
+.neumorphic-search-form {
+  display: flex;
+  align-items: center;
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 25px;
+  padding: 0 16px;
+  height: 100%;
+  width: 240px;
+  animation: expandSearch 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.neumorphic-search-form:focus-within {
+  border-color: #fff;
+}
+
+@keyframes expandSearch {
+  from { width: 140px; opacity: 0.5; }
+  to { width: 240px; opacity: 1; }
+}
+
+.neumorphic-search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 0 10px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.neumorphic-search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.neu-icon, .neu-icon-left {
+  color: #fff;
+  font-size: 16px;
+}
+
+.neu-close-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.neu-close-btn:hover {
+  color: #fff;
+}
